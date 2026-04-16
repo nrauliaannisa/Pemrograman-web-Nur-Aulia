@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            Aplikasi Manajemen Pegawai
+        </header>
+        <div class="container">
+            <aside>
+                <ul class="menu">
+                    <li><a href="dashboard.html" class="aktif rounded-pill">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a></li>
+                    <li><a href="tabel.html" class="aktif rounded-pill">
+                        <i class="bi bi-people"></i> Data Pegawai
+                    </a></li>
+                    <li><a href="tabel.html" class="aktif rounded-pill">
+                        <i class="bi bi-briefcase"></i> Data Jabatan
+                    </a></li>
+                    <li><a href="login.html" class="aktif rounded-pill">
+                        <i class="bi bi-box-arrow-right"></i> Keluar
+                    </a></li>        
+                </ul>
+            </aside>
+            <section class="main">
+                <h2>Tambah Pegawai</h2>
+                <form action="proses.php" method="post">
+
+                    <div class="form-group">
+                        <label for="foto">Foto</label>
+                        <div class="input">
+                            <input type="file" id="foto" name="foto" class="rounded-pill">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <div class="input">
+                            <input type="text" id="nama" name="nama" class="rounded-pill">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="input">
+                            <input type="radio" name="jk" id="jkL" value="L"> Laki-laki
+                            <input type="radio" name="jk" id="jkP" value="P"> Perempuan
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal</label>
+                        <div class="input">
+                            <input type="date" id="tanggal" name="tanggal" class="rounded-pill">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jabatan">Jabatan</label>
+                        <div class="input">
+                            <select id="jabatan" name="jabatan" class="rounded-pill">
+                                <option value="direktur">Direktur</option>
+                                <option value="manajer">Manajer</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="sekretaris">Sekretaris</option>
+                                <option value="chef">Chef</option>
+                                <option value="waiter">Waiter/Waitress</option>
+                                <option value="kasir">Kasir</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Simpan" class="tombol simpan rounded-pill">
+                        <input type="reset" value="Batal" class="tombol reset rounded-pill">
+                    </div>
+
+                </form>
+            </section>
+        </div>
+        <footer>
+            Copyright &copy; 2026        
+        </footer>
+    </body>
+</html>
